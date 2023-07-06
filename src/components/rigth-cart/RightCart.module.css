@@ -1,0 +1,60 @@
+.main{
+    background-color: #F0F8FF;
+    width: 60%;
+    border-radius: 1rem;
+    height: auto;
+    margin-top: 5%;
+}
+.head_title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid rgb(105, 104, 104);
+}
+.menu_list{
+    width: 100%;
+    height: 25rem;
+    overflow-y: scroll;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+}
+.hamberCart{
+    display: flex;
+    background-color: white;
+    /* width: 20rem; */
+    border-radius: 1rem;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+.hamberCart img{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 1rem;
+}
+.hamberCart div{
+    margin: 0px;
+}
+.CartInfo_count{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 5px;
+}
+.CartInfo_count input::-webkit-inner-spin-button,
+.no-spinner::-webkit-outer-spin-button {
+-webkit-appearance: none;
+margin: 0;
+width: 10%;
+    text-align: center;
+}
+.CartInfo_count input{
+    width: 10%;
+    text-align: center;
+}
+.bg_red{
+    background-color: red;
+}

@@ -1,0 +1,70 @@
+.main{
+    background-color: #F0F8FF;
+    width: 20rem;
+    height: auto;
+    border-radius: 1rem;
+    padding: 1% 2% 1% 2%;
+}
+.d_flex{
+    display: flex;
+}
+.between{
+    justify-content: space-between;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+.button button{
+    width: 90%;
+    height: 2rem;
+    color: white;
+    background-color: red;
+    border-radius: .5rem;
+    font-weight: 900;
+}
+
+.discount_code{
+    width: 90%;
+    /* background-color: yellow; */
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    /* border: 1px solid rgb(79, 77, 77); */
+}
+.discount_code input[type="text"]{
+    width: 90%;
+    margin: 0px;
+    border: none;
+    height: 2rem;
+    outline: none;
+    border-radius: 0px 5px 5px 0px;
+    font-weight: 900;
+}
+.discount_code input[type="checkbox"]{
+    width: 2.1rem;
+    height: 2.1rem;
+    margin: 0px;
+    border: none;
+    
+}
+.amount_payable{
+    background-color: yellow;
+    height: 2rem;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3rem;
+    padding: 0px 5px 0px 5px;
+    border-radius: 5px;
+}
