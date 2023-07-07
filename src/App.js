@@ -11,7 +11,7 @@ function App() {
   { code: "5C254SWWF4V", percent: 12 },
   { code: "ENAQ58PL24V", percent: 20 }]
   return (
-    <Context.Provider value={{ totalOrders: totalOrders, setTotalOrders: setTotalOrders, discountCodeList:discountCode, set_pricecount:null }}>
+    <Context.Provider value={{ totalOrders: totalOrders, setTotalOrders: setTotalOrders, discountCodeList:discountCode, set_pricecount:null,set_Clear:null }}>
       <div className={style.main}>
         <RigthCart />
         <LeftCart />ّ

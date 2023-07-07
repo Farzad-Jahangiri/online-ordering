@@ -4,11 +4,12 @@ import hamberdefault from "../image-hamberger/hamber1.png";
 import Context from "../Context";
 
 function Cart() {
+  const myContext = useContext(Context);
   const [count_hamberger, setCount_hamberger] = useState(0);
   const [priceCount, setPricecount] = useState(0);
-  const {setTotalOrders} = useContext(Context);
+  const {setTotalOrders} = myContext;
   const price = 1000;
-
+  
   const ChengeCount = (event) => {
     const action = event.target.innerHTML;
     if (action === "+") {
@@ -50,15 +51,15 @@ function Cart() {
       <div className={style.CartInfo}>
         <div>
           <p>همبرگر معمولی</p>
-          <p>{price} تومان</p>
+          <p>{price.toLocaleString()} تومان</p>
         </div>
         <div className={style.CartInfo_count}>
           <div>
-            <button onClick={ChengeCount}>+</button>
+            <button className={style.btnCount} onClick={ChengeCount}>+</button>
             <input type="number" value={count_hamberger} />
-            <button onClick={ChengeCount}>-</button>
+            <button className={style.btnCount} onClick={ChengeCount}>-</button>
           </div>
-          <p>{priceCount} تومان</p>
+          <p>{priceCount.toLocaleString()} تومان</p>
         </div>
       </div>
     </div>

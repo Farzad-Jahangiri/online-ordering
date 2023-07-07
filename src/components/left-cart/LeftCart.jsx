@@ -1,5 +1,5 @@
 import React, { useContext, useReducer, useState } from "react";
-import ReactDOM from 'react-dom';
+import ReactDOM from "react-dom";
 import style from "./leftCart.module.css";
 import Context from "../Context";
 
@@ -26,20 +26,19 @@ function LeftCart() {
   );
   const serviceCharge = 40;
 
-
-  const Submit = (event)=>{
-    if(totalOrders!==0)
-      document.getElementById("modale").style.display="flex";
-      setTimeout(() => {
-        document.getElementById("modale").style.display="none";
-      }, 3000);
-  }
+  const Submit = (event) => {
+    if (totalOrders !== 0)
+      document.getElementById("modale").style.display = "flex";
+    setTimeout(() => {
+      document.getElementById("modale").style.display = "none";
+    }, 3000);
+  };
 
   return (
     <div className={`${style.main}`}>
       <div className={`${style.d_flex} ${style.between}`}>
         <h4>جمع کل سفارشات:</h4>
-        <h4>{totalOrders} تومان</h4>
+        <h4>{totalOrders.toLocaleString()} تومان</h4>
       </div>
 
       <div className={`${style.d_flex} ${style.between}`}>
@@ -72,9 +71,11 @@ function LeftCart() {
         {/* <h4>{totalOrders!==0?(serviceCharge+totalOrders):0} تومان</h4> */}
         <h4>
           {totalOrders !== 0
-            ? (percent !== 0 && checkedPercent
-                ? totalOrders - (totalOrders / 100) * percent
-                : totalOrders) + serviceCharge
+            ? (
+                (percent !== 0 && checkedPercent
+                  ? totalOrders - (totalOrders / 100) * percent
+                  : totalOrders) + serviceCharge
+              ).toLocaleString()
             : 0}{" "}
           تومان
         </h4>

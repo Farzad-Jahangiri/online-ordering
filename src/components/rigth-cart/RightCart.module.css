@@ -54,7 +54,16 @@ width: 10%;
 .CartInfo_count input{
     width: 10%;
     text-align: center;
+    border: none;
 }
 .bg_red{
     background-color: red;
+}
+.btnCount{
+    background-color: red;
+    color: white;
+    border: none;
+    height: 1.25rem;
+    width: 1.25rem;
+    border-radius: .25rem;
 }
