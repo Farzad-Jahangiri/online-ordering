@@ -46,7 +46,7 @@ function Cart() {
   return (
     <div className={style.hamberCart}>
       <div>
-        <img src={hamberdefault} />
+        <img src={hamberdefault} alt="image" />
       </div>
       <div className={style.CartInfo}>
         <div>
