@@ -4,7 +4,7 @@ import style from "./leftCart.module.css";
 import Context from "../Context";
 
 function LeftCart() {
-  const { totalOrders, discountCodeList } = useContext(Context);
+  const { totalOrders, discountCodeList,setTotalOrders ,set_Clear} = useContext(Context);
   const [percent, setPercent] = useState(0);
   const [checkedPercent, setCheckedPercent] = useState(false);
   const DiscountCode_function = (state, action) => {
@@ -27,6 +27,12 @@ function LeftCart() {
   const serviceCharge = 40;
 
   const Submit = (event) => {
+    setTotalOrders(0);
+    // set_pricecount(true)
+    set_Clear.forEach(set => {
+      set.setPricecount(0);
+      set.setCount_hamberger(0);
+    });
     if (totalOrders !== 0)
       document.getElementById("modale").style.display = "flex";
     setTimeout(() => {
