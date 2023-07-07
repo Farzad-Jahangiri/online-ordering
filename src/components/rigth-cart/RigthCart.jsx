@@ -9,13 +9,13 @@ function Cart(props) {
   const [priceCount, setPricecount] = useState(0);
   const { setTotalOrders } = myContext;
   const price = props.price;
-
+  myContext.set_Clear.push({setCount_hamberger:setCount_hamberger,setPricecount:setPricecount})
 
   const ChengeCount = (event) => {
     const action = event.target.innerHTML;
     if (action === "+") {
       setCount_hamberger(count_hamberger + 1);
-      setPricecount(prevValue => {
+      setPricecount((prevValue) => {
         if (prevValue === 0) {
           return price;
         }
@@ -30,7 +30,7 @@ function Cart(props) {
         return preValue - 1;
       });
       // setPricecount(price * count_hamberger);
-      setPricecount(prevValue => {
+      setPricecount((prevValue) => {
         if (prevValue === 0) {
           return prevValue;
         }
@@ -56,9 +56,13 @@ function Cart(props) {
         </div>
         <div className={style.CartInfo_count}>
           <div>
-            <button className={style.btnCount} onClick={ChengeCount}>+</button>
+            <button className={style.btnCount} onClick={ChengeCount}>
+              +
+            </button>
             <input type="number" value={count_hamberger} />
-            <button className={style.btnCount} onClick={ChengeCount}>-</button>
+            <button className={style.btnCount} onClick={ChengeCount}>
+              -
+            </button>
           </div>
           <p>{priceCount.toLocaleString()} تومان</p>
         </div>
@@ -68,6 +72,7 @@ function Cart(props) {
 }
 
 function RigthCart(props) {
+  
   return (
     <div className={style.main}>
       <div className={style.head_title}>
@@ -75,7 +80,9 @@ function RigthCart(props) {
       </div>
 
       <div className={style.menu_list}>
-        {props.myList.map(value => (<Cart name={value.name} price={value.price} />))}
+        {props.myList.map((value) => (
+          <Cart name={value.name} price={value.price} />
+        ))}
       </div>
     </div>
   );

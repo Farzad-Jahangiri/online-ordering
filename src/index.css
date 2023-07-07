@@ -6,18 +6,18 @@
 
 body {
   margin: 0;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #DA291C;
+  background-color: #da291c;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
-#modale{
+#modale {
   background-color: rgb(187, 182, 182);
   width: 25rem;
   height: 8rem;
@@ -28,23 +28,67 @@ code {
   align-items: center;
   font-weight: 900;
   font-size: xx-large;
-  background-image: linear-gradient(#ca9dcc,#70b89b);
+  background-image: linear-gradient(#ca9dcc, #70b89b);
   text-align: center;
   color: green;
   right: 35%;
   top: -25%;
   animation: modale 3s 1;
   animation-delay: 0s;
-  animation-fill-mode:forwards;
+  animation-fill-mode: forwards;
 }
-@keyframes modale{
-  0%{top: -20%;}
-  30%{top: 25%;}
-  40%{top: 25%;}
-  50%{top: 25%;}
-  60%{top: 25%;}
-  70%{top: 25%;}
-  80%{top: 25%;}
-  90%{top: 25%;}
-  100%{top: -25%;display: none;}
+@keyframes modale {
+  0% {
+    top: -20%;
+  }
+  30% {
+    top: 25%;
+  }
+  40% {
+    top: 25%;
+  }
+  50% {
+    top: 25%;
+  }
+  60% {
+    top: 25%;
+  }
+  70% {
+    top: 25%;
+  }
+  80% {
+    top: 25%;
+  }
+  90% {
+    top: 25%;
+  }
+  100% {
+    top: -25%;
+    display: none;
+  }
 }
+
+#loading {
+  width: 5rem;
+  height: 5rem;
+  border-top: 5px solid black;
+  border-bottom: 5px solid black;
+  border-right: 5px solid rgb(255, 255, 255);
+  border-left: 5px solid rgb(255, 255, 255);
+  border-radius: 50px;
+  animation: load 1s linear infinite;
+  position: absolute;
+  right: 30%;
+  top: 40%;
+}
+
+@keyframes load {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+
