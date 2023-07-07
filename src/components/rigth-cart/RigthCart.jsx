@@ -3,22 +3,23 @@ import style from "./RightCart.module.css";
 import hamberdefault from "../image-hamberger/hamber1.png";
 import Context from "../Context";
 
-function Cart() {
+function Cart(props) {
   const myContext = useContext(Context);
   const [count_hamberger, setCount_hamberger] = useState(0);
   const [priceCount, setPricecount] = useState(0);
-  const {setTotalOrders} = myContext;
-  const price = 1000;
-  
+  const { setTotalOrders } = myContext;
+  const price = props.price;
+
+
   const ChengeCount = (event) => {
     const action = event.target.innerHTML;
     if (action === "+") {
-      setCount_hamberger(count_hamberger+1);
-      setPricecount(prevValue=>{
-        if(prevValue===0){
-            return price;
+      setCount_hamberger(count_hamberger + 1);
+      setPricecount(prevValue => {
+        if (prevValue === 0) {
+          return price;
         }
-        return prevValue+price;
+        return prevValue + price;
       });
       setTotalOrders((prevValue) => {
         return prevValue + price;
@@ -29,14 +30,14 @@ function Cart() {
         return preValue - 1;
       });
       // setPricecount(price * count_hamberger);
-      setPricecount(prevValue=>{
-        if(prevValue===0){
-            return prevValue;
+      setPricecount(prevValue => {
+        if (prevValue === 0) {
+          return prevValue;
         }
-        return prevValue-price;
+        return prevValue - price;
       });
       setTotalOrders((prevValue) => {
-        if(count_hamberger<=0)return prevValue;
+        if (count_hamberger <= 0) return prevValue;
         if (prevValue - price < 0) return prevValue;
         return prevValue - price;
       });
@@ -50,8 +51,8 @@ function Cart() {
       </div>
       <div className={style.CartInfo}>
         <div>
-          <p>همبرگر معمولی</p>
-          <p>{price.toLocaleString()} تومان</p>
+          <p className={style.text}>{props.name}</p>
+          <p className={style.textPrice}>{price.toLocaleString()} تومان</p>
         </div>
         <div className={style.CartInfo_count}>
           <div>
@@ -66,7 +67,7 @@ function Cart() {
   );
 }
 
-function RigthCart() {
+function RigthCart(props) {
   return (
     <div className={style.main}>
       <div className={style.head_title}>
@@ -74,14 +75,7 @@ function RigthCart() {
       </div>
 
       <div className={style.menu_list}>
-        <Cart />
-        <Cart />
-        <Cart />
-        <Cart />
-        <Cart />
-        <Cart />
-        <Cart />
-        <Cart />
+        {props.myList.map(value => (<Cart name={value.name} price={value.price} />))}
       </div>
     </div>
   );

@@ -58,7 +58,7 @@ function LeftCart() {
           onChange={dispatchDiscountCode}
           placeholder="کد تخفیف"
         />
-        <input
+        <input className={style.check}
           onChange={(e) => {
             setCheckedPercent(e.target.checked);
           }}
@@ -82,7 +82,7 @@ function LeftCart() {
       </div>
 
       <div className={style.button}>
-        <button onClick={Submit}>ثبت سفارش</button>
+        <button  onClick={Submit}>ثبت سفارش</button>
       </div>
     </div>
   );
