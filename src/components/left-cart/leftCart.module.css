@@ -1,33 +1,40 @@
-.main{
+.main {
     background-color: #F0F8FF;
-    width: 20rem;
+    width: 25rem;
     height: auto;
     border-radius: 1rem;
-    padding: 1% 2% 1% 2%;
+    padding: 1.5rem;
 }
-.d_flex{
+
+.d_flex {
     display: flex;
+    margin: 1rem;
 }
-.between{
+
+.between {
     justify-content: space-between;
 }
 
-.button{
+.button {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 1rem;
 }
-.button button{
-    width: 90%;
-    height: 2rem;
+
+.button button {
+    font-size: 1.2rem;
+    width: 95%;
+    height: 3.5rem;
     color: white;
-    background-color: red;
+    background-color: rgb(158, 16, 16);
     border-radius: .5rem;
-    font-weight: 900;
+    font-weight: 600;
+    outline: none;
+
 }
 
-.discount_code{
+.discount_code {
     width: 90%;
     /* background-color: yellow; */
     margin-left: auto;
@@ -38,7 +45,8 @@
     margin-top: 5px;
     /* border: 1px solid rgb(79, 77, 77); */
 }
-.discount_code input[type="text"]{
+
+.discount_code input[type="text"] {
     width: 90%;
     margin: 0px;
     border: none;
@@ -46,18 +54,21 @@
     outline: none;
     border-radius: 0px 5px 5px 0px;
     font-weight: 900;
+    padding-right: 0.5rem;
 }
-.discount_code input[type="checkbox"]{
+
+.discount_code input[type="checkbox"] {
     width: 2.1rem;
     height: 2.1rem;
     margin: 0px;
     border: none;
-    
+
 }
-.amount_payable{
-    background-color: yellow;
-    height: 2rem;
-    width: 90%;
+
+.amount_payable {
+    background-color: rgb(255, 199, 44);
+    height: 2.3rem;
+    width: 95%;
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -65,6 +76,10 @@
     align-items: center;
     justify-content: space-between;
     margin-top: 3rem;
-    padding: 0px 5px 0px 5px;
+    padding: 0.8rem;
     border-radius: 5px;
+}
+
+.check:checked {
+    accent-color: rgb(158, 16, 16);
 }
